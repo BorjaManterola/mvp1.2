@@ -1,0 +1,28 @@
+<!-- app/views/fitting_recommendations/index.html.erb -->
+<h1 class="index-title">All Recommendations</h1>
+<%= link_to 'New Recommendation', new_fitting_recommendation_path, class: 'btn btn-primary mb-2' %>
+<div class="container">
+  <div class="col-xl-8 col-md-10 col-12">
+    <table class="table table-striped col-12" style="border: 1px solid #142d4c; color: #142d4c;">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Username</th>
+          <th>Number of Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @fitting_recommendations.each do |fitting_recommendation| %>
+          <tr>
+            <td><%= fitting_recommendation.user_id %></td>
+            <td><%= fitting_recommendation.user.username %></td>
+            <td><%= fitting_recommendation.products.count %></td>
+            <td>
+              <%= link_to "View", fitting_recommendation_path(fitting_recommendation), class: "card-link btn btn-view" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<!-- app/views/fitting_recommendations/show.html.erb -->
+<h1>Recomendaciones para: <%= @fitting_recommendation.user.username %></h1>
+
+<% @fitting_recommendation.products.each do |product| %>
+  <p><%= product.name %></p>
+  <p><%= product.tipo %></p>
+<% end %>
