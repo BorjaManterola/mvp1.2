@@ -10,5 +10,6 @@
     <%= form.collection_select(:user_id, User.all, :id, :username) %>
   </div>
 
-  <%= form.submit "Buscar", class: "btn btn-primary" %>
+  <%= form.submit "Buscar", class: "btn btn-primary" %> 
+  <%= link_to 'Back', root_path, class: "card-link btn btn-back" %>
 <% end %>

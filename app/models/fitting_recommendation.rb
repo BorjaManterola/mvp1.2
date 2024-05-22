@@ -1,9 +1,8 @@
 # app/models/fitting_recommendation.rb
 class FittingRecommendation < ApplicationRecord
   belongs_to :user
-
   has_many :recommendation_to_products
-  has_many :products, through: :recommendation_to_products
+  has_many :products, :through => :recommendation_to_products
 
   def self.create_recommendation(user, products, tipo)
     matching_products = products.select do |product|
@@ -19,15 +18,11 @@ class FittingRecommendation < ApplicationRecord
         end
       end
     end
+    
+    recommendation = self.create(user: user, tipo: tipo)
+    matching_products.each do |product|
+    recommendation.products << product
 
-    if matching_products.any?
-      recommendation = self.create(user: user)
-      matching_products.each do |product|
-        recommendation.products << product
-      end
-      recommendation
-    else
-      nil
     end
   end
 end
