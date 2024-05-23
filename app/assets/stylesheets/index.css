@@ -1,0 +1,35 @@
+.index-user {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ececec;
+}
+.index-title {
+    margin-left: 5%;
+    color: #385170;
+}
+.column-box {
+    background-color: #ececec; /* Light pastel purple */
+    color: #385170; /* Dark gray */
+    border: 1px solid #9fd3c7; /* White */
+    padding: 0.25%;
+}
+.index-box {
+    background-color: #9fd3c7; /* Papaya whip */
+    color: #142d4c; /* Maroon */
+    border: 1px solid #142d4c; /* White */
+    padding: 10px;
+}
+.btn-create {
+    margin-left: 5%;
+    background-color: #9fd3c7;
+    border: 1px solid black;
+}
+.btn-view {
+    color: #ececec;
+    background-color: #2f64a3;
+    border: 1px solid black;
+}
+.btn-edit {
+    color: #ececec;
+    background-color: #385170;
+    border: 1px solid black;
+}

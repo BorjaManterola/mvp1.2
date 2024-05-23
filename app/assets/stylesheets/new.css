@@ -1,0 +1,17 @@
+.new-container {
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 5%;
+    padding-bottom: 3px;
+    color:#385170;
+    background-color: #ececec; /* Light pastel purple */
+}
+.btn-buscar {
+    color: #ececec;
+    background-color: #2f64a3;
+    border: 1px solid black;
+}
+.btn-back {
+    color: #ececec;
+    background-color: #385170;
+    border: 1px solid black;
+}

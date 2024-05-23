@@ -1,20 +1,22 @@
-<!-- app/views/fitting_recommendations/show.html.erb -->
-<h1>Recomendaciones para: <%= @fitting_recommendation.user.username %></h1>
+<%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<table class="table table-striped col-12" style="border: 1px solid #142d4c; color: #142d4c;">
-      <thead>
+<div class="show-recommendations">
+  <h1>Recomendaciones para: <%= @fitting_recommendation.user.username %></h1>
+  <table class="table table-striped" style="border: 1px solid #142d4c; color: #142d4c;">
+    <thead>
+      <tr>
+        <th>Producto ID</th>
+        <th>Producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @fitting_recommendation.products.each do |product| %>
         <tr>
-          <th>Producto ID</th>
-          <th>Producto</th>
+          <td class="user.id"><%= product.id %></td>
+          <td class="user-username"><%= product.name %></td>
         </tr>
-      </thead>
-      <tbody>
-        <% @fitting_recommendation.products.each do |product| %>
-          <tr>
-            <td><%= product.id %></td>
-            <td><%= product.name %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-
+      <% end %>
+    </tbody>
+  </table>
+  <p><%= link_to "Back to Recommendations", root_path, class: "card-link btn btn-back" %></p>
+</div>

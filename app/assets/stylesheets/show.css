@@ -1,0 +1,44 @@
+.show-recommendations {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ececec;
+}
+.user-id {
+    margin-left: 5%;
+    color: #385170;
+}
+.board-user {
+    margin-left: 5%;
+    color: #142d4c;
+}
+.user-container {
+    background-color: #9fd3c7; /* Papaya whip */
+    color: #142d4c; /* Maroon */
+    border: 1px solid #142d4c; /* White */
+    padding: 20px;
+    margin-top: 3%;
+}
+.column-box {
+    background-color: #ececec; /* Light pastel purple */
+    color: #385170; /* Dark gray */
+    border: 1px solid #9fd3c7; /* White */
+}
+.user-username {
+    background-color: #ececec; /* Light pastel purple */
+    color: #385170; /* Dark gray */
+}
+.btn-back {
+    margin-left: 5%;
+    color: #ececec;
+    background-color: #2f64a3;
+    border: 1px solid black;
+}
+.btn-edit {
+    color: #ececec;
+    background-color: #385170;
+    border: 1px solid black;
+}
+.btn-delete {
+    color: #ececec;
+    background-color: #142d4c;
+    border: 1px solid black;
+}
