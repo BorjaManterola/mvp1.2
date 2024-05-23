@@ -1,7 +1,20 @@
 <!-- app/views/fitting_recommendations/show.html.erb -->
 <h1>Recomendaciones para: <%= @fitting_recommendation.user.username %></h1>
 
-<% @fitting_recommendation.products.each do |product| %>
-  <p><%= product.name %></p>
-  <p><%= product.tipo %></p>
-<% end %>
+<table class="table table-striped col-12" style="border: 1px solid #142d4c; color: #142d4c;">
+      <thead>
+        <tr>
+          <th>Producto ID</th>
+          <th>Producto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @fitting_recommendation.products.each do |product| %>
+          <tr>
+            <td><%= product.id %></td>
+            <td><%= product.name %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+

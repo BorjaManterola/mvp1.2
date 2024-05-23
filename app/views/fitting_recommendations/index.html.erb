@@ -6,15 +6,15 @@
     <table class="table table-striped col-12" style="border: 1px solid #142d4c; color: #142d4c;">
       <thead>
         <tr>
-          <th>User ID</th>
+          <th>Recommendation ID</th>
           <th>Username</th>
-          <th>Number of Products</th>
+          <th># Products</th>
         </tr>
       </thead>
       <tbody>
         <% @fitting_recommendations.each do |fitting_recommendation| %>
           <tr>
-            <td><%= fitting_recommendation.user_id %></td>
+            <td><%= fitting_recommendation.id %></td>
             <td><%= fitting_recommendation.user.username %></td>
             <td><%= fitting_recommendation.products.count %></td>
             <td>

@@ -69,15 +69,15 @@ User.create!(
   password: "123456",
   age: 22,
   height: 168.2,
-  chest: 84.0,
-  hip: 93.0,
-  waist: 72.0,
-  arm: 33.5,
-  tlength: 67.0,
+  chest: 100.0,
+  hip: 98.0,
+  waist: 85.0,
+  arm: 60.0,
+  tlength: 75.0,
   inseam: 76.0,
   leglength: 96.0,
   thighwidth: 51.0,
-  backwidth: 41.0
+  backwidth: 45.0
 )
 
 Product.delete_all

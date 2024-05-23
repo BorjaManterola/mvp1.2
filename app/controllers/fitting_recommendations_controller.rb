@@ -11,6 +11,7 @@ class FittingRecommendationsController < ApplicationController
     products = Product.where(tipo: @fitting_recommendation.tipo)
 
     FittingRecommendation.create_recommendation(user, products, @fitting_recommendation.tipo)
+    redirect_to root_path
   end
 
   def index
